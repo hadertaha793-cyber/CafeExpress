@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollPersonnalisation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/barreBoutons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtTitrePerso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="24dp"
+                android:text="Personnalise votre café"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taille" android:textSize="20sp" android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/rgTaille"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:orientation="vertical">
+                <RadioButton android:id="@+id/rbPetit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Petit" />
+                <RadioButton android:id="@+id/rbMoyen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moyen" />
+                <RadioButton android:id="@+id/rbGrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Grand" />
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suppléments" android:textSize="20sp" android:textStyle="bold" />
+            <CheckBox android:id="@+id/chkSucre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sucre" />
+            <CheckBox android:id="@+id/chkCreme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crème (+2 DH)" />
+            <CheckBox android:id="@+id/chkCannelle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="Cannelle (+1 DH)" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swEmporter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="À emporter (+2 DH)" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lait" android:textSize="20sp" android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spnLait"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/txtPrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp"
+                android:text="Prix : ?"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/barreBoutons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Retour" />
+
+        <Button
+            android:id="@+id/btnCalculer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Calculer"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

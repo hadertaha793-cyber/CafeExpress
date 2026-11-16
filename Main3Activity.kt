@@ -87,8 +87,7 @@ class Main3Activity : AppCompatActivity() {
             resultat.putExtra("PRIX_PERSO", prix)
             resultat.putExtra("RESUME_PERSO", resume.joinToString(", "))
             setResult(Activity.RESULT_OK, resultat)
-            // L'écran reste ouvert pour que le client voie le prix.
-            // Le bouton Retour ferme l'écran et transmet le dernier calcul.
+    
         }
 
         btnRetour.setOnClickListener {

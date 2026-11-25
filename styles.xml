@@ -1,6 +1,7 @@
 <resources>
     <style name="Theme.CafeExpress" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">#6B4FA1</item>
+        <item name="colorAccent">#F57C00</item>
+        <item name="android:colorAccent">#F57C00</item>
         <item name="android:fontFamily">sans</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">#FFF8FF</item>

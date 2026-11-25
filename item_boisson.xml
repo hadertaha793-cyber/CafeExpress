@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgBoisson"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="Image de la boisson"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNomBoisson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescriptionBoisson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPrixBoisson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnMoinsBoisson"
+        android:layout_width="40dp"
+        android:layout_height="44dp"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:text="−" />
+
+    <TextView
+        android:id="@+id/tvQuantiteBoisson"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/btnPlusBoisson"
+        android:layout_width="40dp"
+        android:layout_height="44dp"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:text="+" />
+</LinearLayout>

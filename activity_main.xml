@@ -4,152 +4,58 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <TextView
-        android:id="@+id/txtTitre"
+        android:id="@+id/txtAccueilTitre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Café Express"
-        android:textSize="30sp"
+        android:textColor="@color/cafe_principal"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="#F57C00"
+        app:layout_constraintBottom_toTopOf="@id/edtNomClient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtSousTitre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Prise de commande"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTitre" />
-
-    <LinearLayout
-        android:id="@+id/ligneCafe"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSousTitre">
-
-        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Café" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="10 DH" />
-        <Button android:id="@+id/btnMoinsCafe" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="−" />
-        <TextView android:id="@+id/txtCafe" android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="center" android:text="0" />
-        <Button android:id="@+id/btnPlusCafe" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="+" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ligneThe"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ligneCafe">
-
-        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Thé" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="8 DH" />
-        <Button android:id="@+id/btnMoinsThe" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="−" />
-        <TextView android:id="@+id/txtThe" android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="center" android:text="0" />
-        <Button android:id="@+id/btnPlusThe" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="+" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ligneCroissant"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ligneThe">
-
-        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Croissant" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="6 DH" />
-        <Button android:id="@+id/btnMoinsCroissant" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="−" />
-        <TextView android:id="@+id/txtCroissant" android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="center" android:text="0" />
-        <Button android:id="@+id/btnPlusCroissant" android:backgroundTint="#F57C00" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp" android:text="+" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/lblClient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="Nom du client"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ligneCroissant" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
-        android:id="@+id/edtNom"
+        android:id="@+id/edtNomClient"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Exemple : Sara"
+        android:hint="Saisir votre nom"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/barreAccueil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblClient" />
+        app:layout_constraintTop_toBottomOf="@id/txtAccueilTitre"
+        app:layout_constraintVertical_bias="0.35" />
 
-    <Button
-        android:id="@+id/btnPersonnaliser"
+    <LinearLayout
+        android:id="@+id/barreAccueil"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Personnaliser un café"
-        android:backgroundTint="#F57C00"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtNom" />
-
-    <TextView
-        android:id="@+id/txtTotal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Total : 0 DH"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/btnVider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnPersonnaliser"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <Button
-        android:id="@+id/btnVider"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Vider"
-        android:backgroundTint="#F57C00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnCommander"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnCommander"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Commander"
-        android:backgroundTint="#F57C00"
-        android:textStyle="bold"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/btnVider" />
+        app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            android:id="@+id/btnViderNom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vider"
+            android:backgroundTint="@color/cafe_principal" />
+
+        <Button
+            android:id="@+id/btnVersMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu"
+            android:backgroundTint="@color/cafe_principal" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

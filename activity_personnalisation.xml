@@ -22,6 +22,32 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/txtNomBoisson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Boisson"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgProduit"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:contentDescription="Image de la boisson choisie"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtPrixBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Prix moyen : 0 DH"
+                android:textSize="18sp"
+                android:paddingBottom="16dp" />
+
+            <TextView
                 android:id="@+id/txtTitrePerso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +58,7 @@
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taille" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtLabelTaille" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taille" android:textSize="20sp" android:textStyle="bold" />
             <RadioGroup
                 android:id="@+id/rgTaille"
                 android:layout_width="match_parent"
@@ -44,7 +70,7 @@
                 <RadioButton android:id="@+id/rbGrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Grand" />
             </RadioGroup>
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suppléments" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtLabelSupplements" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suppléments" android:textSize="20sp" android:textStyle="bold" />
             <CheckBox android:id="@+id/chkSucre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sucre" />
             <CheckBox android:id="@+id/chkCreme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crème (+2 DH)" />
             <CheckBox android:id="@+id/chkCannelle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="Cannelle (+1 DH)" />
@@ -56,7 +82,7 @@
                 android:layout_marginBottom="14dp"
                 android:text="À emporter (+2 DH)" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lait" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:id="@+id/txtLabelLait" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lait" android:textSize="20sp" android:textStyle="bold" />
             <Spinner
                 android:id="@+id/spnLait"
                 android:layout_width="match_parent"
@@ -90,7 +116,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#F57C00"
             android:text="Retour" />
 
         <Button
@@ -99,7 +124,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Calculer"
-            android:backgroundTint="#F57C00"
             android:textStyle="bold" />
     </LinearLayout>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView android:id="@+id/txtResultatNom" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="28sp" android:textStyle="bold" />
+    <TextView android:id="@+id/txtResultatClient" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:textSize="20sp" />
+    <ImageView android:id="@+id/imgResultat" android:layout_width="200dp" android:layout_height="200dp" android:layout_marginTop="20dp" android:contentDescription="Boisson choisie" android:scaleType="centerCrop" />
+    <TextView android:id="@+id/txtResultatDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center" android:textSize="18sp" />
+    <TextView android:id="@+id/txtResultatTotal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:gravity="center" android:textSize="28sp" android:textStyle="bold" />
+    <Button android:id="@+id/btnConfirmerCommande" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:backgroundTint="@color/cafe_principal" android:text="Confirmer la commande" />
+    <Button android:id="@+id/btnRetourMenu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="Retour au menu" />
+    <Button android:id="@+id/btnRetourAccueil" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:backgroundTint="@color/cafe_principal" android:text="Retour à l’accueil" />
+</LinearLayout>
